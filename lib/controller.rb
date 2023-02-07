@@ -25,4 +25,13 @@ class ApplicationController < Sinatra::Base
     erb :show, locals: {article: Article.find(params["id"])}
   end
 
+  get '/articles/:id/edit/' do
+    erb :edit, locals: {article: Article.find(params["id"])}
+  end
+
+  post '/articles/:id/edit/' do
+    Article.update(params["article_author"], params["article_content"])
+    redirect "/"
+  end
+
 end

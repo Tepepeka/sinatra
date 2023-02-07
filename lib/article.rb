@@ -31,6 +31,16 @@ class Article
     articles.at(id.to_i - 1)
   end
 
+
+  def self.update
+    # 1) j'ouvre ma table csv ds un array(methode find?)
+   
+    # 2) je cherche ds mon array au bon index (methode find?)
+  
+    # 3) je modifie mon article (methode save?)
+    # 4) Re push l'article modifier ds l'array au meme index :/
+  end
+
 end
 
 #binding.pry
